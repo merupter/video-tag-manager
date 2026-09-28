@@ -1,0 +1,43 @@
+# ---------- 依赖 ----------
+node_modules/
+*/node_modules/
+
+# ---------- 构建产物 ----------
+dist/
+build/
+*.tsbuildinfo
+
+# ---------- 环境变量与密钥 ----------
+.env
+.env.local
+.env.*.local
+
+# ---------- 运行时数据（绝不入库，保留空目录通过 .gitkeep） ----------
+# SQLite 数据库文件及其 WAL/SHM 临时文件
+server/data/*
+!server/data/.gitkeep
+*.db
+*.db-wal
+*.db-shm
+
+# 用户上传的视频与缩略图（大文件 + 隐私）
+server/uploads/*
+!server/uploads/.gitkeep
+!server/uploads/thumbnails/.gitkeep
+
+# ---------- 日志 ----------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---------- 编辑器/系统 ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---------- 部署工具临时 ----------
+.terraform/
+.vercel/
+.railway/
